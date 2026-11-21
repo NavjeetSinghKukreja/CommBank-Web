@@ -101,7 +101,7 @@ export function GoalManager(props: Props) {
 
     const updatedGoal: Goal = {
       ...props.goal,
-      icon: emoji.native,
+      icon: emoji.native ?? props.goal.icon,
       name: name ?? props.goal.name,
       targetDate: targetDate ?? props.goal.targetDate,
       targetAmount: targetAmount ?? props.goal.targetAmount,
